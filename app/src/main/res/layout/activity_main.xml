@@ -1,48 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
     android:padding="10dp"
-	tools:context="deliveryapp.yudala.com.deliveryapp.MainActivity">
+    tools:context="deliveryapp.yudala.com.deliveryapp.MainActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/siginin_input"
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        <EditText
-            android:id="@+id/mainactivity_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Email "/>
-        </android.support.design.widget.TextInputLayout>
+            android:layout_height="match_parent">
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/siginin_input2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/siginin_input"
-            android:layout_marginTop="10dp">
-            <EditText
-                android:id="@+id/mainactivity_password"
+            <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Password"
-                android:inputType="textPassword"/>
-        </android.support.design.widget.TextInputLayout>
+                android:layout_height="66dp"
+                android:id="@+id/imageView2"
+                android:elevation="0dp"
+                android:src="@drawable/yudalalogo"
+                android:layout_marginTop="15dp" />
 
-        <Button
-            android:id="@+id/mainactivity_btnMainactivity"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sign In"
-            android:layout_below="@id/siginin_input2"
-            android:layout_marginTop="20dp"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="313dp"
+                android:layout_marginTop="75dp">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/siginin_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/mainactivity_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email "/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/siginin_input2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/siginin_input"
+                    android:layout_marginTop="10dp">
+                    <EditText
+                        android:id="@+id/mainactivity_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Password"
+                        android:inputType="textPassword"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    android:id="@+id/mainactivity_btnMainactivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sign In"
+                    android:layout_below="@id/siginin_input2"
+                    android:layout_marginTop="20dp"
+                    android:background="#e90b8d"
+                    android:textColor="@android:color/white"
+                    android:onClick="main_login" />
+
+            </LinearLayout>
+        </LinearLayout>
+
     </RelativeLayout>
 
-    
+
 </LinearLayout>
